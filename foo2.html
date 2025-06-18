@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.css" rel="stylesheet" />
 </head>
-<body>
 
 <pre><code id="code-block" class="language-cpp"></code></pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
@@ -16,15 +15,13 @@
       const block = document.getElementById('code-block');
       block.textContent = code;
       Prism.highlightElement(block);
-      # Extra hack to set the background color of the body to match whatever prism gave us
       const pre = block.closest('pre');
       if (pre) {
         const bg = getComputedStyle(pre).backgroundColor;
         document.body.style.backgroundColor = bg;
         document.documentElement.style.backgroundColor = bg;
       }
+      AP.resize()
     });
 </script>
-
-</body>
 </html>
